@@ -10,11 +10,19 @@
 ```$ sudo make install ```  
 
 ## Installation Redis Client for node.js
-```$ npm install redis ```
+```$ npm install redis ```  
+or  
+```$ yarn redis ```  
+
+## Installation jest  
+``` $ npm install jest ```  
+or  
+``` $ yarn jest ```
 
 ## Getting Started    
 starting redis-server  
 ```$ redis-server ```
 
 ## Testing 
-```$ node src/test.js ```
+after starting redis-server  
+```$ npm run test```
