@@ -1,10 +1,5 @@
-const redis = require('redis');
-const client = redis.createClient();
-const {promisify} = require('util');
-const getValueByKey = promisify(client.get).bind(client);
-const insert = promisify(client.set).bind(client);
-const deleteItem = promisify(client.del).bind(client);
+const redis_crud = require('./redis-crud')
 
-exports.getValueByKey = getValueByKey
-exports.insert = insert
-exports.delete = deleteItem;
+exports.getValueByKey = redis_crud.getValueByKey
+exports.insert = redis_crud.insert
+exports.deleteItem = redis_crud.deleteItem

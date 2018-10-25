@@ -22,7 +22,7 @@ describe('redis CRUD Driver test',()=>{
         expect(val).toBe(REDIS_UPDATE_VALUE); 
     }) 
     it('completed redis Delete',async()=>{
-        client.delete(REDIS_KEY)
+        client.deleteItem(REDIS_KEY)
         const val = await client.getValueByKey(REDIS_KEY)
         expect(val).toBeNull();
     }) 
