@@ -1,12 +1,18 @@
 const promana = require('./progress-manage')
-const http = require('http')
-const server = http.createServer()
+const express = require('express')
+const app = express()
 
 const port = 8888
 var pre_label = ""
 
-server.on('request',function(req,res){
+app.listen(port)
+console.log('Server is started')
+
+app.post('/returnlabel',function(req, res){
     var next_label
+    var player = req.get('Player')
+    var buttom = "bt1"
+    var label  = "lab1"
     next_label = promana.returnLabel(1,1,1)
     if(pre_label === next_label){
         // do nothing
@@ -16,4 +22,3 @@ server.on('request',function(req,res){
     }
 })
 
-server.listen(port)
