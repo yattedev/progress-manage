@@ -1,0 +1,16 @@
+{
+  "name": "progress-manage",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/IRcpjs/progress-manage",
+  "author": "ir <kakuzamu0718874@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.16.4",
+    "jest": "^23.6.0",
+    "redis": "^2.8.0"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
